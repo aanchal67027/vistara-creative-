@@ -1,0 +1,85 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #000;
+  color: #00ff99;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(0, 255, 153, 0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #00ff99;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 5px #00ff99;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #00ffaa;
+  text-shadow: 0 0 8px #00ffaa;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.75rem;
+  color: #00ffaa;
+  margin-top: 4px;
+  text-shadow: 0 0 4px #00ffaa;
+  font-weight: 400;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #00ff99;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: rgba(0, 255, 153, 0.05);
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::before {
+  opacity: 1;
+}
+
+.nav-links li a:hover {
+  border: 1px solid #00ff99;
+  box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  background-color: rgba(0, 255, 153, 0.05);
+  color: #00ffaa;
+}
